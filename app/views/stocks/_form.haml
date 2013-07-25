@@ -7,7 +7,7 @@
           %li= msg
 
   .field
-    = f.fields_for @stock do |g|
+    = f.fields_for :stock do |g|
       = g.label :ticker
       = g.text_field :ticker
 

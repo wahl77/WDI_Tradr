@@ -10,12 +10,11 @@
 
     %h3 Stocks you have
     - current_user.stocks.each do |stock|
-      = stock.name
-      ,
+      = "#{stock.name}: "
       = stock.ticker
+      %br
 
-    - current_user.userstockinfos.each do |info|
-      = info.stock.name
+
 
 
     = render partial:"form"

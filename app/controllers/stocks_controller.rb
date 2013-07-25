@@ -1,7 +1,7 @@
 class StocksController < ApplicationController
   def index
     @user_stock = Userstockinfo.new
-    @stock = Stock.new
+    @user_stock.build_stock
   end
 
   def show
