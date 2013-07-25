@@ -1,0 +1,4 @@
+var signup_window = $('#signup_window');
+signup_window.empty().append("<%= j render partial:'users/form' %>");
+
+signup_window.foundation("reveal", "open");

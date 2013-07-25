@@ -1,0 +1,8 @@
+.row
+  .large-12.columns
+
+    %p
+      %b Username:
+      = @user.username
+
+    = link_to 'Edit', edit_user_path(@user)

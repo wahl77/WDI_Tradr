@@ -1,0 +1,8 @@
+<% if @logged_in %>
+$('#signup_window').foundation('reveal', 'close');
+
+$('.row .large-12.columns').first().prepend("<div id='notice' class='alert-box success'>Logged In</div>")
+$('section.top-bar-section').empty().append('<%= j render partial:"layouts/nav" %>');
+<% else %>
+alert("Sorry, bad info");
+<% end %> 

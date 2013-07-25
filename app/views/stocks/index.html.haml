@@ -1,0 +1,21 @@
+.row
+  .large-12.columns
+    %h1 Stocks#index
+    %p Find me in app/views/stocks/index.html.haml
+
+
+    You currently have 
+    = current_user.cash 
+    dollars
+
+    %h3 Stocks you have
+    - current_user.stocks.each do |stock|
+      = stock.name
+      ,
+      = stock.ticker
+
+    - current_user.userstockinfos.each do |info|
+      = info.stock.name
+
+
+    = render partial:"form"

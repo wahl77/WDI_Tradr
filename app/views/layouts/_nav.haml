@@ -1,0 +1,12 @@
+%ul.right
+  %li.divider
+    - if current_user
+      %li= link_to "My Stocks", :stocks
+      %li.divider
+      %li= link_to "Edit Profile", edit_user_path(current_user.id)
+      %li.divider
+      %li= link_to "Logout", :logout, remote: true;
+    - else
+      %li= link_to "Register (Ajax)", new_user_path, remote: true, data:{"reveal-id" => "signup_window"}
+      %li.divider
+      %li= link_to "Login (Ajax)", :login, remote: true, data:{"reveal-id" => "login_window"} 

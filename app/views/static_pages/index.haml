@@ -1,0 +1,11 @@
+.row
+  .large-12.columns
+    %h1 
+      This is the static_pages
+    - User.all.each do |user|
+      = user.username
+      %br
+    
+    %h3 
+      = current_user ? current_user : "nil"
+
