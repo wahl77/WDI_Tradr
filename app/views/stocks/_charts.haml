@@ -1,0 +1,2 @@
+- current_user.stocks.pluck(:ticker).uniq.each do |x|
+  = raw "<div id=chart_#{x}></div>"

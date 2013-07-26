@@ -21,4 +21,13 @@ class User < ActiveRecord::Base
   def username=(value)
     write_attribute :username, value.downcase
   end
+
+  def balance
+    total = 0;
+    self.userstockinfos.each do |purchase|
+      total += purchase.quantity * purchase.price
+    end
+    balance = self.cash - total
+
+  end
 end

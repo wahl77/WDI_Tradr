@@ -1,0 +1,6 @@
+$('#new_userstockinfo :input').val("");
+$('#purchases').empty().append("<%= j render partial:'stocks/purchases' %>");
+
+$('#balance').text("<%= current_user.balance %>");
+$("#stock_owned").empty().append("<%= j render partial:'stocks/checkbox' %>");
+//$("#charts").empty().append("<%= j render partial:'stocks/charts' %>");

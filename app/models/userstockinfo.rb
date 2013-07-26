@@ -7,5 +7,9 @@ class Userstockinfo < ActiveRecord::Base
   attr_accessible :stock_attributes
 
 
+  def profit
+    price * quantity - (quantity * self.stock.get_latest_price)
+    stock.get_latest_price
+  end
 
 end

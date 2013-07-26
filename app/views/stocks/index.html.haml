@@ -5,16 +5,24 @@
 
 
     You currently have 
-    = current_user.cash 
+    %span#balance
+      = current_user.balance 
     dollars
 
+    = link_to "Refresh", "/refresh", class: "button", remote: true
+
     %h3 Stocks you have
-    - current_user.stocks.each do |stock|
-      = "#{stock.name}: "
-      = stock.ticker
-      %br
+    #stock_owned 
+      = render partial:"checkbox"
 
-
-
+    #purchases
+      = render partial:"purchases"
 
     = render partial:"form"
+
+    #charts 
+      = render partial:"charts"
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>

@@ -9,6 +9,8 @@ gem 'pg'
 gem 'haml-rails'
 gem 'sorcery'
 gem 'stock_quote'
+gem 'ystock'
+gem 'httparty'
 
 
 # Gems used only for assets and not required

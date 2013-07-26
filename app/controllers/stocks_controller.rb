@@ -21,4 +21,13 @@ class StocksController < ApplicationController
 
   def delete
   end
+
+  def get_data
+    data  = params[:ticker].split(",");
+    respond_to do |format|
+      format.html {}
+      format.js {}
+      format.json { render json: Ystock.find(data) }
+    end
+  end
 end

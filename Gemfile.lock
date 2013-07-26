@@ -66,6 +66,9 @@ GEM
       railties (>= 3.1, < 4.1)
     hike (1.2.3)
     hpricot (0.8.6)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     httpauth (0.2.0)
     i18n (0.6.1)
     journey (1.0.4)
@@ -85,6 +88,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     multi_json (1.7.7)
+    multi_xml (0.5.4)
     multipart-post (1.2.0)
     oauth (0.4.7)
     oauth2 (0.8.1)
@@ -171,6 +175,7 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    ystock (0.3.8)
 
 PLATFORMS
   ruby
@@ -180,6 +185,7 @@ DEPENDENCIES
   binding_of_caller
   factory_girl_rails
   haml-rails
+  httparty
   jquery-rails
   meta_request
   pg
@@ -191,3 +197,4 @@ DEPENDENCIES
   sorcery
   stock_quote
   uglifier (>= 1.0.3)
+  ystock

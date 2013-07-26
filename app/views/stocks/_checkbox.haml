@@ -1,0 +1,3 @@
+- current_user.stocks.pluck(:ticker).uniq.each do |stock|
+  = check_box_tag stock, stock
+  = stock

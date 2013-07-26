@@ -9,4 +9,8 @@ RailsProject::Application.routes.draw do
   
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
+
+  match '/refresh' => 'userstockinfos#refresh'
+  
+  get "/get_data" => 'stocks#get_data', as: :get_data
 end
