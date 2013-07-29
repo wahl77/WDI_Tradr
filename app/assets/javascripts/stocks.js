@@ -49,6 +49,8 @@ $(document).ready(function(){
     element: 'charts',
     data: graph_data,
     xkey: 'time',
+    ymin: 'auto[31]',
+    ymax: 'auto',
     ykeys: keys,
     labels: keys
   });
@@ -66,10 +68,6 @@ $(document).ready(function(){
 
 
 
-  $('input[type=checkbox]').on("click", function(){
-    if (keys.length > 0) {
-      setInterval(update_data, 1000);
-    }
-  });
+  setInterval(update_data, 1000);
 });
 

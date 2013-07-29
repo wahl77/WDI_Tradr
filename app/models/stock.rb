@@ -21,4 +21,5 @@ class Stock < ActiveRecord::Base
     Ystock.get_stock(ticker)[ticker.to_sym][:price].to_f
   end
 
+
 end

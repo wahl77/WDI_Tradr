@@ -12,4 +12,10 @@ class Userstockinfo < ActiveRecord::Base
     stock.get_latest_price
   end
 
+
+  def average_price
+    #all = user.userstockinfos.where(:user.stock
+    
+  end
+
 end

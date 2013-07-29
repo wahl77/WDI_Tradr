@@ -24,6 +24,9 @@ class StocksController < ApplicationController
 
   def get_data
     data  = params[:ticker].split(",");
+    #if data.length >= 2
+    #  binding.pry
+    #end
     respond_to do |format|
       format.html {}
       format.js {}
