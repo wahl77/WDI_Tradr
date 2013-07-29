@@ -8,14 +8,13 @@ class Userstockinfo < ActiveRecord::Base
 
 
   def profit
-    price * quantity - (quantity * self.stock.get_latest_price)
-    stock.get_latest_price
+    (quantity * self.stock.get_latest_price) - price * quantity 
+    #stock.get_latest_price
   end
 
 
   def average_price
     #all = user.userstockinfos.where(:user.stock
-    
   end
 
 end

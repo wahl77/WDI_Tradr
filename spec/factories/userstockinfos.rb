@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :userstockinfo do
-    user nil
-    stock nil
-    quantity 1
-    price 1.5
+    user
+    stock
+    quantity 2
+    price 10
   end
 end
